@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    width: 100%;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    --background-color: #FFD454;
+    --first-color: #FFC107;
+    --second-color: #806104;
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+/*------header------*/
+header{
+    width: 100%;
+    height: 100vh;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .wallpaper {
+    text-align: center;
+}
+
+header nav .wallpaper img {
+    width: 20%;
+}
+
+header nav ul li {
+    display: inline-block;
+    text-align: center;
+    width: 170px;
+    height: 55px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--first-color);
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    position: relative;
+    top: 20%;
+    transition: all 300ms ease-in;
+}
+
+header nav ul li a.active {
+    font-size: 28px;
+}
+
+header nav ul li a:hover {
+    font-size: 28px;
+}
+
+header nav ul li a:focus {
+    font-size: 28px;
+}
+
+header .switch-btn {
+    position: relative;
+    top: 90%;
+    width: 116px;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+}
+
+header .switch-btn span {
+    display: inline-block;
+    cursor: pointer;
+}
+
+header .switch-btn .switch {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    background: var(--first-color);
+    border-radius: 5px;
+}
+
+.slide .switch {
+    left: 50%;
+}
+
+header .video-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    header .video-container {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    header .video-container {
+        width: auto;
+        height: 100%;
+    }
+}
+
+/*------main------*/
+main > .section {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+main > .section h1 {
+    color: var(--second-color);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+/*------about------*/
+main .about {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 30px;
+}
+
+main .about .text-about {
+    margin: 0px 150px 0px 150px;
+}
+
+main .about .text-about > p {
+    margin-top: 50px;
+    font-size: 17px;
+}
+
+main .about .image-about img {
+    margin-top: 50px;
+}
+
+/*------menu------*/
+.menu-filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px 50px;
+}
+
+.menu-filter-container h4 {
+    color: var(--second-color);
+    border: 1px solid var(--second-color);
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: all 600ms ease;
+}
+
+.menu-filter-container h4:hover {
+    color: var(--background-color);
+    background-color: var(--second-color);
+    box-shadow: 0px 0px 5px var(--second-color);
+}
+
+.menu-field {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid red;
+} 
+
+.menu-field > .menu-product {
+    width: 400px;
+    height: 580px;
+    border-radius: 10px;
+}
+
+.menu-field > .menu-product img {
+    width: 80%;
+}
+
+.menu-field > .menu-product .menu-content {
+    margin: 0px 60px 10px;
+}
+
+.menu-field > .menu-product .menu-content h1 {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: none;
+}
+
+.menu-field > .menu-product .menu-content p {
+    font-size: 17px;
+}
